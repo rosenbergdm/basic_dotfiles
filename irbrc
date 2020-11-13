@@ -1,3 +1,4 @@
+# BASIC_CONFIG
 require 'readline'
 require 'wirble'
 Wirble.init
