@@ -4,6 +4,7 @@
 startdir=`pwd`
 srcfile=`readlink -f $0`
 srcdir=`dirname $srcfile`
+srcdir=`dirname $srcdir`
 cd $HOME
 
 if uname -a | grep Debian >/dev/null 2>&1; then
@@ -27,12 +28,12 @@ gem install $rbpackages
 
 for fname in bashrc gitconfig inputrc irbrc nvimrc profile vimrc config/nvim/init.vim; do
   echo "Copying $srcdir/$fname"
-  if [[ -f ".$fname" ]]; then
+  if [ -f ".$fname" ]; then
     tgt=".$fname.`date +%s`"
     echo "Backing up .$fname to $tgt"
     mv .$fname $tgt
   fi
-  echo cp $srcdir/$fname .$fname
+  cp $srcdir/$fname $HOME/.$fname
 done
 
 cd $startdir
