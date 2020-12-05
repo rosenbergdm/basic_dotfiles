@@ -26,7 +26,7 @@ rbpackages="pry readline bundler asciidoctor wirble"
 echo "Installing ruby packages $rbpackages"
 gem install $rbpackages
 
-for fname in bashrc gitconfig inputrc irbrc nvimrc profile vimrc config/nvim/init.vim; do
+for fname in bashrc gitconfig inputrc irbrc nvimrc profile vimrc config/nvim/init.vim xinitrc Xresources; do
   echo "Copying $srcdir/$fname"
   if [ -f ".$fname" ]; then
     tgt=".$fname.`date +%s`"
