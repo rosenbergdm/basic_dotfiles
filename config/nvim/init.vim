@@ -7,7 +7,10 @@ set foldenable
 set foldmethod=marker
 set termguicolors
 
-" set clipboard=unnamedplus
+" FOR OSX
+  " set clipboard=unnamedplus
+" FOR LINUX
+set clipgoard=unnamed
 set nohlsearch
 set number
 set showmatch
